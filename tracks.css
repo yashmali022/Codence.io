@@ -1,0 +1,430 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:#0d0d0d;
+
+  color:#f5f5f5;
+
+  font-family:'Inter',sans-serif;
+
+  overflow-x:hidden;
+
+  -webkit-font-smoothing:antialiased;
+}
+
+/* =========================
+   TRACK LINKS
+========================= */
+
+.track-link{
+
+  display:block;
+
+  text-decoration:none;
+
+  color:inherit;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.bg-glow{
+
+  position:fixed;
+  inset:0;
+
+  z-index:-1;
+
+  background:
+  radial-gradient(
+    circle at top,
+    rgba(47,107,255,0.10),
+    transparent 42%
+  );
+
+  pointer-events:none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+  width:100%;
+  height:84px;
+
+  position:fixed;
+  top:0;
+  left:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 56px;
+
+  background:
+  rgba(13,13,13,0.82);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.05);
+
+  z-index:1000;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-wrap{
+  display:flex;
+  align-items:center;
+}
+
+.logo-wrap img{
+
+  height:74px;
+
+  object-fit:contain;
+
+  opacity:0.95;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+
+  display:flex;
+  align-items:center;
+
+  gap:42px;
+}
+
+nav a{
+
+  position:relative;
+
+  color:#8a8a8a;
+
+  font-size:14px;
+
+  font-weight:500;
+
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+
+  transition:
+  color .3s ease;
+}
+
+nav a:hover,
+.active-nav{
+  color:#ffffff;
+}
+
+nav a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-8px;
+
+  width:0%;
+  height:1px;
+
+  background:#ffffff;
+
+  transition:
+  width .35s cubic-bezier(.16,1,.3,1);
+}
+
+nav a:hover::after,
+.active-nav::after{
+  width:100%;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.checkout-btn{
+
+  padding:11px 20px;
+
+  border-radius:999px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  color:#f5f5f5;
+
+  font-size:13px;
+
+  font-weight:500;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  transition:
+  all .35s cubic-bezier(.16,1,.3,1);
+}
+
+.checkout-btn:hover{
+
+  background:
+  rgba(255,255,255,0.12);
+
+  transform:
+  translateY(-1px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.tracks-hero{
+
+  padding-top:185px;
+
+  padding-left:88px;
+  padding-right:40px;
+
+  padding-bottom:70px;
+}
+
+.hero-label{
+
+  color:#7f7f7f;
+
+  font-size:12px;
+
+  letter-spacing:1.8px;
+
+  text-transform:uppercase;
+}
+
+.tracks-hero h1{
+
+  margin-top:22px;
+
+  font-size:
+  clamp(4rem,8vw,7rem);
+
+  line-height:0.92;
+
+  letter-spacing:-5px;
+
+  font-family:
+  'Playfair Display',serif;
+
+  max-width:760px;
+}
+
+.tracks-hero p{
+
+  margin-top:30px;
+
+  color:#7d7d7d;
+
+  font-size:18px;
+
+  line-height:1.9;
+
+  max-width:560px;
+}
+
+/* =========================
+   TRACKS SECTION
+========================= */
+
+.tracks-section{
+
+  width:100%;
+
+  max-width:1600px;
+
+  margin:auto;
+
+  padding:
+  0 70px 120px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:22px;
+}
+
+/* =========================
+   TRACK CARD
+========================= */
+
+.track-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  aspect-ratio:16/9;
+
+  background:#050505;
+
+  border:
+  1px solid rgba(255,255,255,0.05);
+
+  transition:
+  all .45s cubic-bezier(.16,1,.3,1);
+}
+
+.track-card:hover{
+
+  transform:
+  translateY(-5px);
+
+  border-color:
+  rgba(255,255,255,0.10);
+}
+
+/* =========================
+   THUMBNAIL
+========================= */
+
+.track-card img{
+
+  width:100%;
+
+  aspect-ratio:16/9;
+
+  object-fit:cover;
+
+  object-position:top;
+
+  display:block;
+
+  transition:
+  transform .7s cubic-bezier(.16,1,.3,1);
+}
+
+/* =========================
+   DISCOUNT BADGE
+========================= */
+
+.discount-badge{
+
+  position:absolute;
+
+  top:18px;
+  right:18px;
+
+  padding:10px 14px;
+
+  border-radius:999px;
+
+  background:
+  rgba(0,0,0,0.55);
+
+  backdrop-filter:blur(10px);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  color:#ffffff;
+
+  font-size:11px;
+
+  font-weight:600;
+
+  letter-spacing:1.2px;
+
+  text-transform:uppercase;
+
+  z-index:10;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+  nav{
+    display:none;
+  }
+
+  .tracks-section{
+
+    grid-template-columns:
+    1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  header{
+    padding:0 22px;
+  }
+
+  .logo-wrap img{
+    height:62px;
+  }
+
+  .tracks-hero{
+
+    padding-left:24px;
+    padding-right:24px;
+  }
+
+  .tracks-section{
+
+    padding:
+    0 24px 100px;
+  }
+
+  .tracks-hero h1{
+
+    letter-spacing:-3px;
+  }
+
+  .tracks-hero p{
+
+    font-size:16px;
+  }
+
+  .checkout-btn{
+
+    padding:10px 16px;
+
+    font-size:11px;
+  }
+
+}

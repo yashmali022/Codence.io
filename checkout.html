@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    CODENCE — Payment Gateway
+  </title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="success.css">
+
+</head>
+
+<body>
+
+  <!-- GRID -->
+  <div class="grid-overlay"></div>
+
+  <!-- ORBS -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo-wrap">
+
+      <img src="logo.png" alt="CODENCE">
+
+    </div>
+
+    <div class="secure-pill">
+
+      <span></span>
+
+      Secured Transactions
+
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <section class="gateway-section">
+
+    <!-- LEFT -->
+    <div class="gateway-left">
+
+      <div class="gateway-badge">
+
+        <span></span>
+
+        Enterprise-grade payment authorization workflow
+
+      </div>
+
+      <h1>
+        Complete
+        Secure
+        Payment
+      </h1>
+
+      <p>
+        Scan the QR code and complete your transaction securely. Your session remains active for the next 5 minutes.
+      </p>
+
+      <!-- USER INFO -->
+      <div class="info-card">
+
+        <div class="info-row">
+
+          <span>
+            Student Name
+          </span>
+
+          <h3>
+            YASH JAYRAM MALI
+          </h3>
+
+        </div>
+
+        <div class="info-row">
+
+          <span>
+            Payment ID
+          </span>
+
+          <h3>
+            COD-PAY-47291
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="gateway-right">
+
+      <!-- TIMER -->
+      <div class="timer-card">
+
+        <span>
+          SESSION EXPIRES IN
+        </span>
+
+        <h2 id="timer">
+          05:00
+        </h2>
+
+      </div>
+
+      <!-- QR -->
+      <div class="qr-card">
+
+        <img src="yash.jpeg" alt="QR Code">
+
+        <p>
+          Scan using any UPI-enabled application to complete your payment workflow.
+        </p>
+
+      </div>
+
+      <!-- POWERED -->
+      <div class="powered-card">
+
+        <span>
+          Powered by
+        </span>
+
+        <img src="upi.png" alt="PNG">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SUCCESS PAGE -->
+  <div class="overlay-page success-page" id="successPage">
+
+    <div class="overlay-card">
+
+      <div class="status-icon success-icon">
+        ✓
+      </div>
+
+      <span>
+        PAYMENT SUCCESSFUL
+      </span>
+
+      <h1>
+        Enrollment
+        Confirmed
+      </h1>
+
+      <p>
+        Tax invoice will be forwarded soon on your registered email address.
+      </p>
+
+      <h4>
+        Thank you for your trust in CODENCE.
+      </h4>
+
+      <a href="index.html">
+        Return to Platform
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FAILED PAGE -->
+  <div class="overlay-page failed-page" id="failedPage">
+
+    <div class="overlay-card">
+
+      <div class="status-icon failed-icon">
+        ×
+      </div>
+
+      <span>
+        PAYMENT FAILED
+      </span>
+
+      <h1>
+        Transaction
+        Failed
+      </h1>
+
+      <p>
+        Your payment could not be processed successfully. Please retry the transaction workflow again.
+      </p>
+
+      <h4>
+        No amount has been deducted from your account.
+      </h4>
+
+      <a href="checkout.html">
+        Retry Payment
+      </a>
+
+    </div>
+
+  </div>
+
+   <!-- SCRIPT -->
+  <script>
+
+    let time = 300;
+
+    const timer =
+      document.getElementById("timer");
+
+    setInterval(() => {
+
+      const minutes =
+        Math.floor(time / 60);
+
+      const seconds =
+        time % 60;
+
+      timer.innerHTML =
+        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+      if (time > 0) {
+        time--;
+      }
+
+    }, 1000);
+
+    document.addEventListener("keydown", function(e){
+
+      /* CTRL + 0 = SUCCESS */
+
+      if(e.ctrlKey && e.key === "0"){
+
+        e.preventDefault();
+
+        document
+          .getElementById("successPage")
+          .style.display = "flex";
+      }
+
+      /* CTRL + 9 = FAILED */
+
+      if(e.ctrlKey && e.key === "9"){
+
+        e.preventDefault();
+
+        document
+          .getElementById("failedPage")
+          .style.display = "flex";
+      }
+
+    });
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CODENCE — Alumni Dashboard</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="alumni.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <div class="bg-glow"></div>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="logo-wrap">
+      <a href="index.html">
+        <img src="logo.png" alt="CODENCE">
+      </a>
+    </div>
+
+    <nav>
+      <a href="tracks.html">Tracks</a>
+      <a href="partners.html">Partners</a>
+      <a href="alumni.html" class="active-nav">Alumni</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a href="checkout.html" class="checkout-btn">
+      Join Platform
+    </a>
+
+  </header>
+
+  <!-- HERO -->
+  <section class="alumni-hero">
+
+    <span class="hero-label">CODENCE ALUMNI</span>
+
+    <h1>
+      Builders shaping
+      modern careers.
+    </h1>
+
+    <p>
+      Learners from CODENCE building projects,
+      startups and modern tech journeys.
+    </p>
+
+  </section>
+
+  <!-- ALUMNI GRID -->
+  <section class="alumni-grid">
+
+    <div class="alumni-card"><h3>Aarav Mehta</h3><p>22 · SDE · Google</p></div>
+    <div class="alumni-card"><h3>Rohan Verma</h3><p>23 · Backend Engineer · Amazon</p></div>
+    <div class="alumni-card"><h3>Ishan Khanna</h3><p>24 · Full Stack Dev · Microsoft</p></div>
+    <div class="alumni-card"><h3>Dev Patel</h3><p>22 · Data Analyst · IBM</p></div>
+    <div class="alumni-card"><h3>Aryan Das</h3><p>23 · ML Engineer · Meta</p></div>
+    <div class="alumni-card"><h3>Kabir Nair</h3><p>25 · SDE · Netflix</p></div>
+    <div class="alumni-card"><h3>Vihaan Sharma</h3><p>22 · Frontend Dev · Adobe</p></div>
+    <div class="alumni-card"><h3>Arjun Rao</h3><p>23 · DevOps Engineer · AWS</p></div>
+    <div class="alumni-card"><h3>Yash Bhatia</h3><p>24 · Software Engineer · Flipkart</p></div>
+    <div class="alumni-card"><h3>Kunal Sinha</h3><p>22 · Data Scientist · Salesforce</p></div>
+
+    <div class="alumni-card"><h3>Aditya Menon</h3><p>23 · Backend Dev · Oracle</p></div>
+    <div class="alumni-card"><h3>Ritesh Kapoor</h3><p>24 · SDE · Paytm</p></div>
+    <div class="alumni-card"><h3>Nikhil Jain</h3><p>22 · ML Engineer · Nvidia</p></div>
+    <div class="alumni-card"><h3>Harsh Vardhan</h3><p>25 · Full Stack Dev · Swiggy</p></div>
+    <div class="alumni-card"><h3>Siddharth Agarwal</h3><p>23 · Frontend Dev · Zomato</p></div>
+
+    <div class="alumni-card"><h3>Manav Reddy</h3><p>24 · Data Engineer · Cisco</p></div>
+    <div class="alumni-card"><h3>Shubham Gupta</h3><p>22 · SDE · Uber</p></div>
+    <div class="alumni-card"><h3>Rahul Malhotra</h3><p>23 · Backend Engineer · Razorpay</p></div>
+    <div class="alumni-card"><h3>Mohit Bansal</h3><p>24 · ML Intern · Adobe</p></div>
+    <div class="alumni-card"><h3>Pranav Iyer</h3><p>22 · Software Engineer · Spotify</p></div>
+
+    <div class="alumni-card"><h3>Ananya Sharma</h3><p>23 · Data Analyst · Microsoft</p></div>
+    <div class="alumni-card"><h3>Ishita Singh</h3><p>22 · Frontend Dev · Google</p></div>
+    <div class="alumni-card"><h3>Sneha Nair</h3><p>24 · ML Engineer · Meta</p></div>
+    <div class="alumni-card"><h3>Diya Kapoor</h3><p>23 · Product Engineer · Amazon</p></div>
+    <div class="alumni-card"><h3>Rhea Mehta</h3><p>22 · UI Engineer · Adobe</p></div>
+
+    <div class="alumni-card"><h3>Kavya Joshi</h3><p>24 · Backend Dev · Oracle</p></div>
+    <div class="alumni-card"><h3>Tanya Desai</h3><p>23 · Data Scientist · IBM</p></div>
+    <div class="alumni-card"><h3>Pooja Shah</h3><p>22 · SDE · Flipkart</p></div>
+    <div class="alumni-card"><h3>Meera Verma</h3><p>24 · DevOps · AWS</p></div>
+    <div class="alumni-card"><h3>Nandini Rao</h3><p>23 · Full Stack Dev · Salesforce</p></div>
+
+    <div class="alumni-card"><h3>Zoya Khan</h3><p>23 · Data Engineer · Cisco</p></div>
+    <div class="alumni-card"><h3>Sana Ali</h3><p>24 · ML Engineer · Nvidia</p></div>
+    <div class="alumni-card"><h3>Isha Bhat</h3><p>22 · SDE · Paytm</p></div>
+    <div class="alumni-card"><h3>Fatima Ansari</h3><p>23 · Backend Dev · Amazon</p></div>
+    <div class="alumni-card"><h3>Ayesha Khan</h3><p>24 · Software Engineer · Microsoft</p></div>
+
+    <div class="alumni-card"><h3>Nida Shaikh</h3><p>22 · Data Analyst · IBM</p></div>
+    <div class="alumni-card"><h3>Maryam Qureshi</h3><p>23 · Frontend Dev · Adobe</p></div>
+    <div class="alumni-card"><h3>Hina Ali</h3><p>24 · ML Intern · Meta</p></div>
+
+    <div class="alumni-card"><h3>Vivan Deshmukh</h3><p>22 · SDE · Google</p></div>
+    <div class="alumni-card"><h3>Omkar Joshi</h3><p>23 · Backend Engineer · Flipkart</p></div>
+    <div class="alumni-card"><h3>Parth Mehta</h3><p>24 · ML Engineer · Nvidia</p></div>
+    <div class="alumni-card"><h3>Sarthak Jain</h3><p>22 · SDE · Paytm</p></div>
+    <div class="alumni-card"><h3>Krish Agarwal</h3><p>23 · Backend Dev · Amazon</p></div>
+
+    <div class="alumni-card"><h3>Vivek Bhatia</h3><p>24 · DevOps · AWS</p></div>
+    <div class="alumni-card"><h3>Ankit Verma</h3><p>22 · Full Stack Dev · Microsoft</p></div>
+    <div class="alumni-card"><h3>Harshit Gupta</h3><p>23 · SDE · Google</p></div>
+    <div class="alumni-card"><h3>Devansh Kapoor</h3><p>24 · Data Analyst · IBM</p></div>
+    <div class="alumni-card"><h3>Rajat Verma</h3><p>22 · Software Engineer · Netflix</p></div>
+
+  </section>
+
+  <!-- DASHBOARD -->
+  <section class="stats-section">
+
+    <span class="stats-label">CODENCE INTELLIGENCE DASHBOARD</span>
+
+    <h2>Placement analytics across courses & companies</h2>
+
+    <p>Real-time alumni hiring insights across major tech stacks.</p>
+
+    <<div class="chart-box">
+  <canvas id="courseChart"></canvas>
+</div>
+
+    <div class="chart-box">
+  <canvas id="companyChart"></canvas>
+</div>
+  </section>
+<script>
+/* =========================
+   COURSE CHART
+========================= */
+
+new Chart(document.getElementById("courseChart"), {
+  type: "bar",
+  data: {
+    labels: ["C++ DSA", "Full Stack", "AI/ML", "Data Science", "DevOps"],
+    datasets: [{
+      label: "Placement %",
+      data: [78, 85, 72, 70, 76],
+      backgroundColor: "rgba(47,107,255,0.6)",
+      borderColor: "rgba(47,107,255,1)",
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { labels: { color: "#fff" } }
+    },
+    scales: {
+      x: { ticks: { color: "#aaa" } },
+      y: { ticks: { color: "#aaa" } }
+    }
+  }
+});
+
+
+/* =========================
+   COMPANY CHART
+========================= */
+
+new Chart(document.getElementById("companyChart"), {
+  type: "bar",
+  data: {
+    labels: ["Google","Amazon","Microsoft","Meta","Adobe","Netflix","Flipkart"],
+    datasets: [{
+      label: "Alumni Hired",
+      data: [12,14,10,8,9,6,11],
+      backgroundColor: "rgba(95,140,255,0.6)",
+      borderColor: "rgba(95,140,255,1)",
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { labels: { color: "#fff" } }
+    },
+    scales: {
+      x: { ticks: { color: "#aaa" } },
+      y: { ticks: { color: "#aaa" } }
+    }
+  }
+});
+</script>
+</body>
+</html>
